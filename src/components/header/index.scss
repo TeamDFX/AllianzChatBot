@@ -1,10 +1,14 @@
 .container-header {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
   background-color: #007bff;
-  height: 6vh;
   height: 80px;
+
+  .container-header__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 
   .container-header__name {
     display: flex;
@@ -13,7 +17,6 @@
     gap: 40px;
     color: white;
     cursor: pointer;
-    margin-right: 50px;
 
     .icon {
       top: 10px;

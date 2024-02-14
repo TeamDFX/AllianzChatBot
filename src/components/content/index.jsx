@@ -17,9 +17,7 @@ function Content() {
     event.preventDefault();
     const message = inputValue;
     if (message.trim() !== "") {
-      addUserMessage(
-        ` ${getUserName || ''}: ${message}`
-      );
+      addUserMessage(` ${getUserName || ""}: ${message}`);
       setInputValue("");
       search(message);
     }
@@ -30,7 +28,7 @@ function Content() {
       prompt,
     };
     try {
-      setLoading(true)
+      setLoading(true);
       const response = await axios.post(
         process.env.REACT_APP_NGROK_URL + "/chat",
         request
@@ -39,7 +37,7 @@ function Content() {
     } catch (error) {
       console.error("Error fetching data:", error);
     } finally {
-      setLoading(false)
+      setLoading(false);
     }
   };
 
@@ -77,13 +75,15 @@ function Content() {
 
   return (
     <div className="content-container">
-      <Messages messages={messages} />
-      <Search
-        inputValue={inputValue}
-        setInputValue={setInputValue}
-        sendMessage={sendMessage}
-        loading={loading}
-      />
+      <div className="responsive-wrapper">
+        <Messages messages={messages} />
+        <Search
+          inputValue={inputValue}
+          setInputValue={setInputValue}
+          sendMessage={sendMessage}
+          loading={loading}
+        />
+      </div>
     </div>
   );
 }

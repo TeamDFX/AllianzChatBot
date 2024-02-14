@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
       <Helmet>
-        <title>AI Copy Challange</title>
+        <title>Allianz Chatbot</title>
       </Helmet>
       <Routes>
         <Route path="/" element={<Layout />} />

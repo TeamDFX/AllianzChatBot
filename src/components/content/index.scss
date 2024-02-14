@@ -23,12 +23,6 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: calc(
-    100vh - 80px
-  ); /* Sayfa yüksekliğinden header ve footer yüksekliği çıkarıldı */
-  width: 100%;
-  max-width: 800px;
-  margin: 20px auto;
 }
 
 .messages {
@@ -57,24 +51,21 @@ body {
 }
 
 .content-container__chat {
-  width: 100%;
-  max-width: 800px;
   height: 60vh;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   overflow-y: auto;
+  margin: 2.5% 0px;
 }
+
 .search-container {
   width: 100%;
-  max-width: 800px;
-  margin: 20px auto;
 
   .content-container__input-area {
     display: flex;
     align-items: center;
-    padding: 2.5%;
-
+    padding: 1% 2.5%;
     border-top: 1px solid #ccc;
     background-color: #f9f9f9;
     border-radius: 20px;
